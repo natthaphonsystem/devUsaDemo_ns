@@ -1,0 +1,12 @@
+<p>reatcm works!</p>
+<div>
+    <button type="button" class="btn btn-default" (click)="getApiService()">Get Api</button>
+    
+    </div>
+    <div *ngFor="let tData of oList">
+    {{tData.txn_date}}{{tData.province}}
+    </div>
+
+    <div>
+    <button type="button" class="btn btn-primary" (click)="resetData()">Reset</button>
+    </div>
