@@ -1,19 +1,14 @@
-.corToolbar{
-    background-color:cornflowerblue;
-    
-}
 
-.corMenu {
-    color: aliceblue;
-    height: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
-}
-
-.containerToolbar {
+.navHeader {
+    background-color: plum;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
+* {
+    font-size: 1rem;
+  }
+
+  html {
+    font-size: calc(60% + 0.8vmin);
+  }

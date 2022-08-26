@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectapiService } from 'src/app/services/connectapi.service';
 
 @Component({
   selector: 'app-newinfo',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newinfo.component.scss']
 })
 export class NewinfoComponent implements OnInit {
+
+  
 
   constructor() { }
 

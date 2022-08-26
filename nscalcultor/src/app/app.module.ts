@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+import { NavamenuComponent } from './components/navmenu/navamenu/navamenu.component';
+import { ConnectapiService } from './services/connectapi.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 //--------- Material Design
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -39,20 +45,18 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CalcultorComponent } from './components/calcultor/calcultor.component';
-import { SignupComponent } from './components/signup/signup/signup.component';
-import { NavamenuComponent } from './components/navmenu/navamenu/navamenu.component';
-import { AboutasComponent } from './components/aboutas/aboutas/aboutas.component';
-import { NewinfoComponent } from './components/newinfo/newinfo/newinfo.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CmlrateComponent } from './Models/rate/cmlrate/cmlrate.component';
+
+
 //--------- Material Design
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcultorComponent,
-    SignupComponent,
     NavamenuComponent,
-    AboutasComponent,
-    NewinfoComponent
+    CmlrateComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +64,7 @@ import { NewinfoComponent } from './components/newinfo/newinfo/newinfo.component
     BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,
+    HttpClientModule,
 
     //--- Material Design
     BrowserAnimationsModule,
@@ -94,13 +99,23 @@ import { NewinfoComponent } from './components/newinfo/newinfo/newinfo.component
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule
+    
 
     //--- Material Design
 
 
+
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ConnectapiService
+
+  ],
+  bootstrap: [AppComponent],
+  exports: [
+    CmlrateComponent
+  ]
 })
 export class AppModule { }
