@@ -1,0 +1,14 @@
+
+.navHeader {
+    background-color: plum;
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    font-size: 1rem;
+  }
+
+  html {
+    font-size: calc(60% + 0.8vmin);
+  }

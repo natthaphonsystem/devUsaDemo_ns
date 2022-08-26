@@ -1,0 +1,32 @@
+<div class="main-div">
+    <div class="example-button-row">
+    <h1>{{title}}</h1>
+    <mat-card>Calculator
+    <form class="example-form" appearance="file" (submit) = "C_SUMxData()">
+    
+    <mat-form-field class="example-full-width" appearance="fill" >
+    <mat-label>Parameter 1</mat-label>
+    <input matInput placeholder="Ex. 100" required="true"
+    [(ngModel)] = "oData.rc_para1"  name="otbPara1"
+    type="number"
+    >
+    
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Parameter 2</mat-label>
+    <input matInput placeholder="Ex. 100" required="true"
+    [(ngModel)] = "oData.rc_para2" name="otbPara1"
+    type="number"
+    >
+    
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Cal</button>
+    <button mat-raised-button color="primary" type="reset" (click)="C_RSTxData()">Reset</button>
+    </form>
+    <p>Result : {{cTotal}}</p>
+    <mat-progress-bar mode="determinate" value="{{cTotal}}"></mat-progress-bar>
+    </mat-card>
+    
+    </div>
+    </div>
