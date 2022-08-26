@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { NavamenuComponent } from './components/navmenu/navamenu/navamenu.component';
 import { ConnectapiService } from './services/connectapi.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GlobalserviceService } from './services/globalservice.service';
 
 
 
@@ -46,7 +47,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CalcultorComponent } from './components/calcultor/calcultor.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CmlrateComponent } from './Models/rate/cmlrate/cmlrate.component';
+import { ReatcmComponent } from './components/rate/reatcm/reatcm.component';
+
 
 
 //--------- Material Design
@@ -56,7 +58,9 @@ import { CmlrateComponent } from './Models/rate/cmlrate/cmlrate.component';
     AppComponent,
     CalcultorComponent,
     NavamenuComponent,
-    CmlrateComponent
+    ReatcmComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,7 @@ import { CmlrateComponent } from './Models/rate/cmlrate/cmlrate.component';
     MatSliderModule,
     FormsModule,
     HttpClientModule,
+    
 
     //--- Material Design
     BrowserAnimationsModule,
@@ -110,12 +115,13 @@ import { CmlrateComponent } from './Models/rate/cmlrate/cmlrate.component';
 
   ],
   providers: [
-    ConnectapiService
+    ConnectapiService,
+    GlobalserviceService
 
   ],
   bootstrap: [AppComponent],
   exports: [
-    CmlrateComponent
+   
   ]
 })
 export class AppModule { }
